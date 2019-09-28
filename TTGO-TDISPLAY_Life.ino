@@ -32,20 +32,20 @@ Button2 btn2(BUTTON_2);
 int vref = 1100;
 int btnCick = false;
 // Maximum number of generations until the screen is refreshed
-#define MAX_GEN_COUNT 500
+#define MAX_GEN_COUNT 1000
 
 // The ESP8266 has plenty of memory so we can create a large array
 // 2 x 2 pixel cells, array size = 5120 bytes per array, runs fast
-#define GRIDX 80
-#define GRIDY 33
-#define CELLXY 3
+//#define GRIDX 80
+//#define GRIDY 33
+//#define CELLXY 3
 
 // 1 x 1 pixel cells, array size = 20480 bytes per array
-//#define GRIDX 240
-//#define GRIDY 100
-//#define CELLXY 1
+#define GRIDX 120
+#define GRIDY 50
+#define CELLXY 2
 uint16_t COLOUR2 = random(0xFFFF);
-#define GEN_DELAY 50 // Set a delay between each generation to slow things down
+#define GEN_DELAY 15 // Set a delay between each generation to slow things down
 
 //Current grid and newgrid arrays are needed
 uint8_t grid[GRIDX][GRIDY];
